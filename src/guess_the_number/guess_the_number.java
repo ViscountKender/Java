@@ -7,7 +7,7 @@ public class guess_the_number {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Ваша задача угадать число");
-        int range = 100;
+        int range = 500;
         int number =(int)(Math.random()* range);
         while (true) {
             System.out.println("Угадайте число от 0 " + range);
@@ -26,6 +26,7 @@ public class guess_the_number {
             }
         }
         scanner.close();
+
 
     }
 }
