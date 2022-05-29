@@ -2,13 +2,20 @@ package guess_the_number;
 
 import java.util.Scanner;
 
-public class Main {
+public class guess_the_number {
+    private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+
         System.out.println("Ваша задача угадать число");
-        int range = 100;
-        int number =(int)(Math.random()* range);
+        for (int i = 10; i <= 30; i += 10) playlevel(i);
+        System.out.println("Вы выиграли!!!");
+        scanner.close();
+
+    }
+
+    private static void  playlevel (int range){
+        int number = (int) (Math.random() * range);
         while (true) {
             System.out.println("Угадайте число от 0 " + range);
             int input_number = scanner.nextInt();
@@ -25,7 +32,6 @@ public class Main {
 
             }
         }
-        scanner.close();
 
     }
 }
